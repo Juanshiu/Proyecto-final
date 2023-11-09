@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #191919;
+}
+
+:root {
+    --fondo-real: #191919;
+    --background-color: #2E2E2E;
+    --color-primario: #9000ff;
+    --gris-claro: #A7AAB5;
+    --letras: #f0f0f0;
+    --negro: #000000;
+}
+
+.head-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/dpr.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5) ; /* Ajusta los valores del filtro según tus necesidades */
+}
+
+.head-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background: none; /* Elimina el fondo en .head-content */
+
+    .head-content2 {
+        padding: 1rem;
+        z-index: 1;
+        width: 50%;
+        display: flex;
+        backdrop-filter: blur(10px) brightness(0.8);
+    }
+    
+    & img {
+        width: 20rem;
+    }
+
+    .tag-album {
+        padding: 1rem;
+        color: var(--letras);
+
+        & p:first-child {
+            color: var(--color-primario);
+            font-weight: bold;
+        }
+    }
+}
+
+
+

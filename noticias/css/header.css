@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #191919;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*============ header =============*/
+
+header {
+    color: #f0f0f0;
+    background-color: #000000;
+    padding: 1px 5%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+header .logo-content {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    gap: 10px;
+
+    .logo {
+        width: 50px;
+        height: auto;
+    }
+}
+
+header .logo-content a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+    
+header .nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+header .nav li a {
+    text-decoration: none;
+}
+
+header .nav li .hover-nav {
+    color: #f0f0f0;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 2;
+    position: relative;
+}
+
+header .nav li .hover-nav::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #9000ff;
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    transition: transform .4s, opacity .4s;
+    opacity: 0;
+}
+
+header .nav li .hover-nav:hover::after {
+    transform: translateY(-.25rem);
+    opacity: 1;
+}
+
+header .hover-nav-active {
+    border-bottom: 3px solid #9000ff;
+    color: #f0f0f0;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* ------ barras ----- */
+header button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.menu__icon {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__icon span {
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 0.125rem;
+    background-color: #9000ff;
+    /*box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);*/
+    transition: transform .4s, background-color .4s, opacity .4s;
+}
+
+
+/* --------- Responsive Menu Header -------*/
+
+header .barras {
+    display: none;
+    cursor: pointer;
+}
+
+header .header-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 5rem;
+    right: 2.32rem;
+    background-color: rgba(2, 2, 2, 0.4);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    width: 15rem;
+    padding: .5rem;
+    animation-name: wipe-in-down;
+    animation-duration: .5s;
+}
+
+.header-menu .hide {
+    animation-name: wipe-in-up;
+    animation-duration: .85s;
+}
+
+@keyframes wipe-in-down {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes wipe-in-up {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+header .header-menu .nav-menu li{
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+header .header-menu .nav-menu a {
+    display: flex;
+    padding: .8rem;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    border-radius: 15px;
+}
+
+
+
+header .header-menu .nav-menu .menu-hover:hover {
+    background-image: linear-gradient(90deg, #9000ff 0%, #dcc66c 50%, #ffa3b6 75%, #9000ff 100%);
+    animation: slidernbw 5s linear infinite;
+    color: #000;
+}
+@keyframes slidernbw {
+    to {
+        background-position: 20vw;
+    }
+}
+
+/* ------- Hover Inicio sesion -----*/
+
+.glow-on-hover {
+    padding: .8rem;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: 0.5 ease-in-out ;
+}
+
+.glow-on-hover:hover {
+    color: #000;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+    color: #000;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@media (width < 880px) {
+    header .nav {
+        display: none;
+    }
+
+    header .barras {
+        display: block;
+    }
+
+    .canciones-lista {
+        columns: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+}

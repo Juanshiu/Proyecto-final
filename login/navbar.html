@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Songlit</title>
+    <link rel="icon" href="../imgintro/songlit.svg">
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="../noticias/css/header.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!------------ Header ------------->
+
+  <header>
+    <div class="logo-content">
+        <img src="../../PaginaWebProyecto/imgintro/songlit.svg" class="logo" alt="Songlit">
+        <a href="../index.html" class="hover-nav">Songlit</a>
+    </div>
+    <ul class="nav">
+        <li><a href="../index.html" class="hover-nav">Inicio</a></li> 
+        <li><a href="../noticias/noticias.html" class="hover-nav">Tendencias</a></li>
+        <li><a href="#" class="hover-nav">Videos</a></li>
+        <li><a href="#" class="hover-nav">Favoritos</a></li>
+    </ul>
+  
+    <!-------- Barras Responsive ----------->
+  
+    <div class="barras">
+        <div class="background-barras">
+            <button class="menu__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="header-menu">
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="menu-hover">Inicio</a></li> 
+            <li><a href="../noticias/noticias.html" class="menu-hover">Noticias</a></li> 
+            <li><a href="#" class="menu-hover">Videos</a></li> 
+            <li><a href="#" class="menu-hover">Favoritos</a></li> 
+        </ul>
+    </div>
+  </header>
+
+  <body>
+    
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form>
+          <h1>Registrate</h1>
+          <div class="form-control">
+            <input type="text" id="username" placeholder="Nombre" />
+            <small id="username-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="email" id="email" placeholder="Email" />
+            <small id="email-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="password" id="password" placeholder="Contraseña" />
+            <small id="password-error"></small>
+            <span></span>
+          </div>
+          <button type="submit" value="submit">Registrar</button>
+          <span>O registra tu cuenta con:</span>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container login-container">
+        <form class="form-lg">
+          <h1>Inicia Sesión </h1>
+          <div class="form-control2">
+            <input type="email" class="email-2" placeholder="Email" />
+            <small class="email-error-2"></small>
+            <span></span>
+          </div>
+          <div class="form-control2">
+            <input type="password" class="password-2" placeholder="Contraseña" />
+            <small class="password-error-2"></small>
+            <span></span>
+          </div>
+
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label for="checkbox">Recordar</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Olvidé mi contraseña</a>
+            </div>
+          </div>
+          <button type="submit" value="submit">Inciar Sesión</button>
+          <span>O inicia tu cuenta con:</span>
+          <div class="social-container">
+            <a href="#" class="socialf"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="socialg"><i class="fa-brands fa-google"></i></a>
+            <a href="#" class="socialh"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">
+              Hola <br />
+              Amigos
+            </h1>
+            <p>Preparate</p>
+            <button class="ghost" id="login">
+              Iniciar Sesión
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Descubre todo<br />
+              sobre tu artista
+            </h1>
+            <p>
+              Artistas, discografía, Premiaciones, historia, etc.
+            </p>
+            <button class="ghost" id="register">
+              Registro
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="../noticias/noticias.js"></script>
+</html>

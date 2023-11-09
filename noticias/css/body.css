@@ -1,0 +1,360 @@
+
+/*============ Contenido principal =============*/
+/*============ Barra de busqueda =============*/
+:root {
+    --background-color: #2E2E2E;
+    --color-primario: #9000ff;
+    --gris-claro: #A7AAB5;
+    --letras: #f0f0f0;
+    --negro: #000000;
+}
+
+.contenido-principal {
+    color: var(--letras);
+    height: auto;
+    width: 75%;
+}
+
+.contenido-principal .barra-navegacion {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 0 1.25rem 0;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+    border: 1px solid var(--color-primario);
+    padding: .5rem;
+    background: var(--background-color);
+    min-width: 50%;
+}
+
+.barra-busqueda input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: var(--letras);
+}
+
+.barra-busqueda input::placeholder {
+    color: var(--gris-claro); 
+}
+
+.barra-busqueda i {
+    cursor: pointer;
+    color: var(--gris-claro);
+}
+
+/*------------------------*/
+
+.barra-navegacion .time-wins{
+    margin-left: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+}
+
+.time-wins summary {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: .5rem;
+    border: 1px solid var(--color-primario);
+    border-radius: .5rem;
+}
+
+.barra-navegacion .time-wins summary i {
+    transition: transform 0.3s;
+    transition: 0.3s;
+}
+
+.barra-navegacion .time-wins[open] summary i {
+    transform: rotate(180deg);
+    color: var(--color-primario);
+}
+
+.ventana-time {
+    width: 100%;
+    height: 9.1rem;
+    overflow: auto;
+    padding: .5rem;
+    position: absolute;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    background: linear-gradient(to bottom, var(--background-color), var(--negro));
+}
+
+.ventana-time ul li {
+    margin-bottom: .2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    list-style: none;
+}
+
+.ventana-time ul li:hover {
+    background-color: var(--color-primario);
+}
+
+/* ---------- Filtro Responsive ------------ */
+
+.barra-navegacion .filtro-wins{
+    margin-left: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    display: none;
+}
+
+.filtro-wins summary {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: .5rem;
+    border: 1px solid var(--color-primario);
+    border-radius: .5rem;
+    gap: .7rem;
+    justify-content: space-between;
+}
+
+.barra-navegacion .filtro-wins summary i {
+    transition: transform 0.3s;
+    transition: 0.3s;
+}
+
+.barra-navegacion .filtro-wins[open] summary i {
+    transform: rotate(180deg);
+    color: var(--color-primario);
+}
+
+.filtro-time {
+    position: absolute;
+    width: 100%;
+    height: 9.1rem;
+    overflow: auto;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    background: linear-gradient(to bottom, var(--background-color), var(--negro));
+}
+
+.filtro-time table {
+    width: 100%;
+}
+
+.filtro-time table tr td{
+    padding: .5rem;
+    text-align: start;
+    font-size: 14px;
+}
+
+
+
+/* ----------- Popular album ---------*/
+
+/* .discos-populares {
+} */
+
+.popular-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: .8rem;
+}
+
+.popular-album {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+}
+
+.card .name-artist {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: .5rem;
+}
+
+.card {
+    width: 8rem;
+}
+
+.card p {
+    display:none; 
+    position: absolute;
+    background-color: var(--color-primario);
+    padding: 5px;
+    color: var(--letras);
+    font-weight: bold;
+    border-radius: 0 8px 8px 8px;
+    font-size: 13px;
+}
+
+.card img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.card h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.card .album, .name-artist {
+    color: var(--letras);
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.card .album:hover, .name-artist:hover {
+    color: var(--gris-claro);
+}
+
+/* ------- Lo mas popular -----*/
+
+.canciones-popular {
+    padding: 1.25rem 0 1.25rem 0;
+    margin-top: 2rem;
+}
+
+.canciones-popular h2 {
+    margin-bottom: .8rem;
+}
+
+.canciones-lista {
+    columns: 2;
+    list-style: none;
+}
+
+.canciones-lista li  {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    transition: .1s ease-in-out;
+}
+
+.canciones-lista li:hover  {
+    background-color: var(--background-color);
+}
+
+.canciones-lista a {
+    
+    display: flex;
+    color: var(--letras);
+    text-decoration: none;
+}
+
+.canciones-lista a img {
+    width: 4.5rem;
+    height: auto;
+    border-radius: 15px 0 0 15px;
+}
+
+.canciones-lista .text-song {
+    padding: .8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.canciones-lista li a span{
+    font-weight: bold;
+}
+
+
+/* Artistas populares */
+
+.artistas-populares {
+    margin-bottom: 1em;
+}
+.artistas-populares h2 {
+    margin-bottom: .8rem;
+}
+
+.artist-content {
+    display: flex;
+    gap: 2.1rem;
+    flex-wrap: wrap;
+}
+
+.artist-content a  {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--letras);
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.artist-content a:hover {
+    background-color: var(--background-color);
+}
+
+.artist-content a img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.artist-content a span {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: 2.7rem;
+    left: 1.5rem;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+@media (width <= 850px) {
+    .contenido-principal {
+        width: 90%;
+    }
+
+    .canciones-lista {
+        columns: 1;
+    }
+}
+
+@media (width <= 1024px) {
+
+    .time-wins {
+        display: none;
+    }
+
+    .barra-navegacion .filtro-wins {
+        display: block;
+    }
+}
+
+@media (width <= 426px) {
+
+    .barra-navegacion {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .artist-content {
+        gap: 3rem;
+    }
+}
