@@ -7,17 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #191919;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 /*============ header =============*/
 
 header {
@@ -36,11 +25,11 @@ header .logo-content {
     font-weight: bold;
     font-size: 17px;
     gap: 10px;
+}
 
-    .logo {
-        width: 50px;
-        height: auto;
-    }
+header .logo-content img {
+    width: 50px;
+    height: auto;
 }
 
 header .logo-content a {
@@ -132,7 +121,7 @@ header .barras {
 header .header-menu {
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     top: 5rem;
     right: 2.32rem;
     background-color: rgba(2, 2, 2, 0.4);

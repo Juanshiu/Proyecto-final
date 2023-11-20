@@ -1,7 +1,6 @@
 
 /*:::::Pie de Pagina*/
 
-
 .pie-pagina{
     width: 100%;
     background-color: var(--negro);
@@ -21,17 +20,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    & a{
-        color: var(--color-primario);
-        align-items: center;
-        font-size: 2rem;
-        gap: 1rem;
+.pie-pagina .grupo-1 .box figure a{
+    color: var(--color-primario);
+    align-items: center;
+    font-size: 2rem;
+    gap: 1rem;
+}
 
-        & img {
-            width: 150px;
-        }
-    }
+.box figure a img {
+    width: 150px;
+    height: auto;
 }
 
 /* .pie-pagina .grupo-1 .box figure img{
@@ -87,7 +87,5 @@
     .pie-pagina .grupo-1 .box{
         justify-content: center;
     }
-
-    
 
 }

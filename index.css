@@ -40,7 +40,7 @@ main {           /*cuerpo*/
 
 .content h1 {
     font-size: 100px;
-    color: white;
+    color: var(--letras);
     font-weight: 600;
     transition: 0.5s;
 }
