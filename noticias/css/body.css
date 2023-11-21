@@ -364,6 +364,9 @@ main{
         display: block;
     }
     
+    .barra-navegacion {
+        gap: 1rem;
+    }
 }
 
 @media (width <= 426px) {
