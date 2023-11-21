@@ -69,6 +69,8 @@ body {
     color: var(--letras);
     margin-top: 1.2rem;
     flex-wrap: wrap;
+    min-height: 100vh;
+
 }
 
 /* ========== Parte izquierda ======*/
@@ -108,6 +110,11 @@ body {
     color: var(--letras);
     display: flex;
     align-items: center;
+}
+
+.track-content a h3 span {
+    margin-left: .5rem;
+    font-weight: normal;
 }
 
 .more-track {

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: url(./imgintro/degrad.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--fondo-real);
+}
+
+:root {
+    --fondo-real: #191919;
+    --background-color: #2E2E2E;
+    --color-primario: #9000ff;
+    --gris-claro: #A7AAB5;
+    --letras: #f0f0f0;
+    --negro: #000000;
+    --hover: #424242;
+    --bradius: .5rem;
+}
+
+header {
+    background-color: transparent !important;
+}
+
+
+/* ========== Contenido principal ======== */
+main {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    position: relative;
+    width: 50%;
+    color: var(--letras);
+    margin-top: 1.2rem;
+    min-height: 100vh;
+}
+
+.acerca {
+    width: 100%;
+}
+
+.ubi {
+    display: flex;
+    align-items: center;
+}
+
+.ubi a {
+    color: var(--letras);
+}
+
+.ubi a:hover {
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.content-about{
+    padding: 1rem;
+    border-radius: var(--bradius);
+    background-color: var(--background-color);
+    margin: 2rem 0 2rem 0;
+}
+
+.content-about h1{
+    margin-bottom: 1rem;
+}
+
+@media (width <= 1025px) {
+
+    main {
+        width: 80%;
+    }
+}
+
+@media (width <= 769px) {
+
+    body {
+        background-position: 80%;
+        background-size: cover;
+    }
+}
+
+@media (width <= 426px) {
+
+    body {
+        background-position: 85%;
+        background-size: cover;
+    }
+}

@@ -71,7 +71,6 @@ main{
 
 .time-wins summary {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +115,6 @@ main{
 /* ---------- Filtro Responsive ------------ */
 
 .barra-navegacion .filtro-wins{
-    margin-left: 1.5rem;
     cursor: pointer;
     width: 100%;
     display: none;
@@ -180,7 +178,7 @@ main{
 .popular-album {
     flex-wrap: wrap;
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
 }
 
 .card .name-artist {
@@ -231,7 +229,6 @@ main{
 
 .canciones-popular {
     padding: 1.25rem 0 1.25rem 0;
-    margin-top: 2rem;
 }
 
 .canciones-popular h2 {
@@ -292,7 +289,7 @@ main{
 
 .artist-content {
     display: flex;
-    gap: 2.1rem;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -343,6 +340,18 @@ main{
     .canciones-lista {
         columns: 1;
     }
+
+    .card {
+        width: 9rem;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .card img {
+        width: 9rem;
+        height: 9rem;
+    }
+
 }
 
 @media (width <= 1024px) {
@@ -354,9 +363,20 @@ main{
     .barra-navegacion .filtro-wins {
         display: block;
     }
+    
 }
 
 @media (width <= 426px) {
+
+    .card {
+        width: 7rem;
+        height: auto;
+    }
+    
+    .card img {
+        width: 7rem;
+        height: 7rem;
+    }
 
     .barra-navegacion {
         display: flex;
@@ -364,7 +384,7 @@ main{
         gap: 1rem;
     }
 
-    .artist-content {
-        gap: 3rem;
+    .barra-navegacion .barra-busqueda{
+        min-width: 100%;
     }
 }
