@@ -60,6 +60,20 @@ document.getElementById("myLink").onmousemove = function(event) {
     info.style.top = (event.pageY + 20) + 'px';
 }
 
+var info1 = document.getElementById("info1");
+document.getElementById("myLink1").onmouseover = function(event) {
+    info1.style.display = "block";
+    info1.style.left = event.pageX + 'px';
+    info1.style.top = (event.pageY + 20) + 'px';
+}
+document.getElementById("myLink1").onmouseout = function() {
+    info1.style.display = "none";
+}
+document.getElementById("myLink1").onmousemove = function(event) {
+    info1.style.left = event.pageX + 'px';
+    info1.style.top = (event.pageY + 20) + 'px';
+}
+
 // Escucha el evento de clic en todo el documento
 document.addEventListener('click', function(event) {
   // Obtiene todos los elementos <details> abiertos
